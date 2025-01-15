@@ -12,5 +12,10 @@ public class AccountPage extends Page {
     public void clickLogoutButton() {
         logoutButton.click();
     }
+
+    public boolean isLogoutButtonDisplayed(){
+        return logoutButton.isDisplayed();
+    }
+
 }
 

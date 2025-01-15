@@ -17,8 +17,8 @@ public class DataGeneratorManager {
         return fakerObject.name().lastName();
         }
 
-        public static String getRandomPasword(int min, int max){
-        return fakerObject.internet().password();
+        public static String getRandomPasword(int minLenght, int maxLenght){
+        return fakerObject.internet().password(7, 10);
         }
     }
 

@@ -18,7 +18,7 @@ public class TestRunner {
         homePage.navigateToRegisterPage();
 
         RegisterPage registerPage = new RegisterPage(driver);
-        registerPage.completeRegisterForm("Andrei", "Ioc", DataGeneratorManager.getRandomEmail(), DataGeneratorManager.getRandomPasword(2,12));
+        registerPage.completeRegisterForm("Andrei", "Ioc", DataGeneratorManager.getRandomEmail(), DataGeneratorManager.getRandomPasword(10,11));
         Thread.sleep(5000);
         registerPage.clickSubmitButton();
 
