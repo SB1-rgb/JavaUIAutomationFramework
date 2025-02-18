@@ -45,10 +45,19 @@ public class DriverManager {
     }
 
 
-    public WebDriver getDriver(){
-        if(driver== null){
+    public WebDriver getDriver() {
+        if (driver == null) {
             getInstance();
         }
         return driver;
     }
-}
+
+    public void quitTheDriver() {
+        driver.quit();
+        driver= null;
+        instance= null;
+        System.out.println("The driver was reset to null, same as instance object");
+        }
+    }
+
+
