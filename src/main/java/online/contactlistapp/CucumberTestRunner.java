@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
      features = "src/main/java/online/contactlistapp/features",//locatia la feature files
      glue ="online.contactlistapp.stepdefinitions",  //implementarea pasilor tehnici
-        tags = " ",
+        tags = "",
         plugin = {"pretty", "html: target/cucumber-reports"}// plugin pentru generare de rapoarte care se numeste pretty, se stocheaza in html
 
 )

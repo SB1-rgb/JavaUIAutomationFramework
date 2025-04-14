@@ -35,8 +35,8 @@ public class TestRegistrationFlowWithJunit {
     public void registerWithValidData() throws InterruptedException {
 
         String email = DataGeneratorManager.getRandomEmail();
-        String firstName = DataGeneratorManager.getName();
-        String lastName = DataGeneratorManager.getLastName();
+        String firstName = DataGeneratorManager.getRandomFirstName();
+        String lastName = DataGeneratorManager.getRandomLastName();
         String password = DataGeneratorManager.getRandomPasword(10, 25);
         System.out.println("The Email used is " + email + " " + " and the password used is " + password);
         registerPage.completeRegisterForm(firstName, lastName, email, password);
@@ -54,8 +54,8 @@ public class TestRegistrationFlowWithJunit {
     public void cantRegisterWithInvalidData() throws InterruptedException {
 
         String email = DataGeneratorManager.getRandomEmail();
-        String firstName = DataGeneratorManager.getName();
-        String lastName = DataGeneratorManager.getLastName();
+        String firstName = DataGeneratorManager.getRandomFirstName();
+        String lastName = DataGeneratorManager.getRandomLastName();
         String password = DataGeneratorManager.getRandomPasword(1, 2);
         System.out.println("The Email used is " + email + " " + " and the password used is " + password);
         registerPage.completeRegisterForm(firstName, lastName, email, password);
