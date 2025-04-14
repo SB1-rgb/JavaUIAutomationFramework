@@ -9,12 +9,12 @@ public class DataGeneratorManager {
         return fakerObject.internet().emailAddress();
     }
 
-        public static String getName(){
-            return fakerObject.name().firstName();
+        public static String getRandomFirstName(){
+            return fakerObject.internet().emailAddress();
         }
 
-        public static String getLastName(){
-        return fakerObject.name().lastName();
+        public static String getRandomLastName(){
+            return fakerObject.internet().emailAddress();
         }
 
         public static String getRandomPasword(int minLenght, int maxLenght){
