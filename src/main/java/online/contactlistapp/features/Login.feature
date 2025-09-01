@@ -8,6 +8,7 @@ Feature: Log in scenarios
       | <email>    |
       | <password> |
     When the login button is clicked
+    When "submitButton" from "LoginPage" is clicked
     Then the following error message is displayed
       | Incorrect username or password |
     Examples:

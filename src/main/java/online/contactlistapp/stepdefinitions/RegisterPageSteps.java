@@ -3,6 +3,7 @@ package online.contactlistapp.stepdefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import online.contactlistapp.managers.ConfigReaderManager;
 import online.contactlistapp.managers.DataGeneratorManager;
 import online.contactlistapp.managers.DriverManager;
 import online.contactlistapp.pageobjects.RegisterPage;
@@ -20,7 +21,7 @@ public class RegisterPageSteps {
         String name = DataGeneratorManager.getRandomFirstName();
         String lastName = DataGeneratorManager.getRandomLastName();
         String email = DataGeneratorManager.getRandomEmail();
-        String password = DataGeneratorManager.getRandomPasword(10, 20);
+        String password = DataGeneratorManager.getRandomPasword(Integer.parseInt(ConfigReaderManager.getProperty("passwordMin")), Integer.parseInt(ConfigReaderManager.getProperty("passwordMax")));//Integer.parseInt() schimba un string intr-un integer9folosit de ex la .properties
 
         registerPage.completeRegisterForm(name, lastName, email, password);
 

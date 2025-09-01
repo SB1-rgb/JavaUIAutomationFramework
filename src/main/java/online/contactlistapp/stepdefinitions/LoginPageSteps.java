@@ -26,4 +26,5 @@ public class LoginPageSteps {
         loginPage.clickSubmitButton();
         System.out.println("The login button was clicked");
     }
+
 }
